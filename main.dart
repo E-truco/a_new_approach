@@ -33,6 +33,7 @@ class Versus {
       //comparison needs to be made between the first and the second
       for(int j = 1; j < hands.length; j++){
         if (hands[j][i].number > hands[currentWinner][i].number){
+          //j means the position in the list of lists, i means the position in the list of cards
           currentWinner = j;
         }
       }
