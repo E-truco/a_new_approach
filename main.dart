@@ -3,26 +3,20 @@ import 'versus.dart';
 import 'player.dart';
 
 void main() {
-    List<List<Card>> hands = [];
+    List<Player> players = [];
     Player playerOne = Player('Gustavo', [Card(4,'Clubs')]);
-    hands.add(playerOne.hand);
+    players.add(playerOne);
   
     Player playerTwo = Player('Maruan', [Card(3, 'Spades')]);
-    hands.add(playerTwo.hand);
+    players.add(playerTwo);
 
     Player playerThree = Player('Icaro', [Card(2,'Hearts')]);
-    hands.add(playerThree.hand);
+    players.add(playerThree);
 
     Player playerFour = Player('Victor', [Card(1,'Diamonds')]);
-    hands.add(playerFour.hand);
-  //this could be a loop?
-  for (var hand in hands){
-      for (var card in hand){
-        print('${card.number} of ${card.suit}');
-      }
-    }
+    players.add(playerFour);
   
-  Versus versus = Versus(hands);
+  Versus versus = Versus(players);
   print(versus.compareHands().join('\n'));
 }
 
