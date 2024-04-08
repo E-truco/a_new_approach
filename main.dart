@@ -1,30 +1,32 @@
 class Card {
-  final String valor;
-  final String naipe;
+  final String number;
+  final String suit;
 
-  Carta(this.valor, this.naipe);
-  //cria carta, carta tem que ir para o baralho
+  Card(this.number, this.suit);
+  //create card, cart must go somewhere
 }
 
 
 class Player {
   final String name;
-  List<Carta> hand;
+  List<Card> hand = [];
 
-  Player(this.name, [Card cards]){
-    hand = [];
-
-    if(cards != null){
-        hand.add(cards);
-    }
+  Player(this.name, Card cards){
+    hand.add(cards);
   }
 
 }
 
 void main() {
-    Player player = Player('Gustavo', Card('3','Spades'));
-    print(player);
-
+    Player playerOne = Player('Gustavo', Card('3','Spades'));
+    for (var card in playerOne.hand) {
+    print('${card.number} of ${card.suit}');//should turn this into a class to make a dev's life easier
+  }
+  
+    Player playerTwo = Player('Maruan', Card('2', 'Clubs'));
+    for (var card in playerTwo.hand) {
+    print('${card.number} of ${card.suit}');
+    }
 }
 
 
