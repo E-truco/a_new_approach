@@ -1,4 +1,3 @@
-import 'card.dart';
 import 'player.dart';
 
 class Versus {
