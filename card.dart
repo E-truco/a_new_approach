@@ -27,6 +27,21 @@ class Card {
         return 0; 
     }
   }
+  
+  int get suitRank {
+    switch (suit) {
+      case 'Clubs':
+        return 4;
+      case 'Hearts':
+        return 3;
+      case 'Spades':
+        return 2;
+      case 'Diamonds':
+        return 1;
+      default:
+        return 0;
+    }
+  }
 
   @override
   String toString() {
