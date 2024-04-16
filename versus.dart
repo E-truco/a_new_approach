@@ -10,7 +10,7 @@ class Versus {
     for (int i = 0; i < players[0].hand.length; i++) {
       int currentWinner = 0;
       for (int j = 1; j < players.length; j++) {
-        if (players[j].hand[i].number > players[currentWinner].hand[i].number) {
+        if (players[j].hand[i].cardRank > players[currentWinner].hand[i].cardRank) {
           
           currentWinner = j;
         }
